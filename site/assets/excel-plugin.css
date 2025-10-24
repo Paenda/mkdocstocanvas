@@ -1,0 +1,100 @@
+
+/* Excel Plugin Styles */
+.excel-table-wrapper {
+    overflow-x: auto;
+    margin: 1rem 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.excel-table {
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    width: 100%;
+    min-width: 100%;
+    margin: 0;
+}
+
+.excel-table td, .excel-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    background-color: transparent;
+    color: inherit;
+    text-align: left;
+    vertical-align: top;
+}
+
+.excel-info {
+    background-color: rgba(68, 138, 255, 0.1);
+    border: 1px solid rgba(68, 138, 255, 0.2);
+    border-radius: 4px;
+    padding: 12px;
+    margin: 1rem 0;
+}
+
+.excel-error {
+    background-color: rgba(255, 68, 68, 0.1);
+    border: 1px solid rgba(255, 68, 68, 0.2);
+    border-radius: 4px;
+    padding: 12px;
+    margin: 1rem 0;
+}
+
+.excel-warning {
+    background-color: rgba(255, 193, 7, 0.1);
+    border: 1px solid rgba(255, 193, 7, 0.2);
+    border-radius: 4px;
+    padding: 12px;
+    margin: 1rem 0;
+}
+
+.excel-sheet-section {
+    margin: 2rem 0;
+}
+
+.excel-sheet-title {
+    color: #1976d2;
+    border-bottom: 2px solid #1976d2;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.excel-sheet-divider {
+    margin: 2rem 0;
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #ddd, transparent);
+}
+
+/* Dark theme support */
+[data-md-color-scheme="slate"] .excel-table td,
+[data-md-color-scheme="slate"] .excel-table th {
+    border-color: #404040;
+}
+
+[data-md-color-scheme="slate"] .excel-info {
+    background-color: rgba(68, 138, 255, 0.2);
+    border-color: rgba(68, 138, 255, 0.3);
+}
+
+[data-md-color-scheme="slate"] .excel-error {
+    background-color: rgba(255, 68, 68, 0.2);
+    border-color: rgba(255, 68, 68, 0.3);
+}
+
+[data-md-color-scheme="slate"] .excel-warning {
+    background-color: rgba(255, 193, 7, 0.2);
+    border-color: rgba(255, 193, 7, 0.3);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .excel-table {
+        font-size: 0.8rem;
+    }
+
+    .excel-table td, .excel-table th {
+        padding: 6px;
+    }
+}

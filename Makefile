@@ -1,4 +1,4 @@
-.PHONY: serve delete-pages delete-modules delete-labs upload-pages upload-modules upload-labs clean
+.PHONY: serve pdf delete-pages delete-modules delete-labs upload-pages upload-modules upload-labs clean
 
 # Serve the documentation locally
 serve:
