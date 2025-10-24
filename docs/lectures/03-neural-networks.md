@@ -24,7 +24,7 @@ where:
 - $b \in \mathbb{R}$ is the bias term
 - $f$ is the activation function
 
-![Perceptron Diagram](../assets/images/perceptron.png)
+![Perceptron Diagram](./assets/images/perceptron.png)
 
 ### Activation Functions
 

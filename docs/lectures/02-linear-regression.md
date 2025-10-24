@@ -332,7 +332,7 @@ $$
 | Ridge  | $\lambda \sum \theta_j^2$ | Closed-form | No |
 | Lasso  | $\lambda \sum \|\theta_j\|$ | Iterative | Yes |
 
-![Ridge vs Lasso](../assets/images/ridge-vs-lasso.png)
+![Ridge vs Lasso](./assets/images/ridge-vs-lasso.png)
 
 ## Model Evaluation Metrics
 

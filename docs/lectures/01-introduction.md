@@ -184,7 +184,7 @@ $$
 \text{Expected Error} = \text{Bias}^2 + \text{Variance} + \text{Irreducible Error}
 $$
 
-![Bias-Variance Tradeoff](../assets/images/bias-variance.png)
+![Bias-Variance Tradeoff](./assets/images/bias-variance.png)
 
 !!! important "Finding the Sweet Spot"
     The goal is to find a model complexity that minimizes the total error — neither too simple (high bias) nor too complex (high variance).
