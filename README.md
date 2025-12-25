@@ -10,6 +10,7 @@
 ## TODO
 - Ugly with double titles
 - Structure the files on Canvas somehow
+- Make sure to read through and change readme + quickstart guide
 *** 
 
 A complete system for publishing MkDocs-based course content to Canvas LMS, with automatic PDF generation and module organization.
