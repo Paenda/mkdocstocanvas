@@ -1,5 +1,17 @@
 # Canvas Course Publisher
 
+***
+
+## NOTE
+- Removed the letter prefix when uploading pages (it was ugly)
+- Added dockerfile
+- Fixed bug. When a page linked to pdf:s the pdf:s didn't get uploaded.
+
+## TODO
+- Ugly with double titles
+- Structure the files on Canvas somehow
+*** 
+
 A complete system for publishing MkDocs-based course content to Canvas LMS, with automatic PDF generation and module organization.
 
 ## Features
