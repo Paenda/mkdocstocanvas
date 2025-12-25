@@ -1,6 +1,6 @@
-site_name: Cryptography
-site_description: Test test test
-site_author: Nithit Sathornkit (courtesy of Elena Pagnin)
+site_name: Introduction to Machine Learning
+site_description: A comprehensive course on machine learning fundamentals
+site_author: Your Name
 
 theme:
   name: material
@@ -70,15 +70,13 @@ extra_css:
 nav:
   - Home:
     - index.md
-  - Module 1 - Symmetric Key Cryptography:
-    - lectures/01-otp_prg.md
-    - lectures/02-hash_prg.md
-  - Module 2 - Public Key Cryptography:
-    - lectures/05-group_theory.md
-    - lectures/06-pkc.md
-  # - Lecture 3 - Neural Networks:
-  #   - lectures/03-neural-networks.md
-  # - Lab 1 - Python Basics:
-  #   - labs/lab1.md
-  # - Lab 2 - Implementing Linear Regression:
-  #   - labs/lab2.md
+  - Lecture 1 - Introduction:
+    - lectures/01-introduction.md
+  - Lecture 2 - Linear Regression:
+    - lectures/02-linear-regression.md
+  - Lecture 3 - Neural Networks:
+    - lectures/03-neural-networks.md
+  - Lab 1 - Python Basics:
+    - labs/lab1.md
+  - Lab 2 - Implementing Linear Regression:
+    - labs/lab2.md
