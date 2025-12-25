@@ -262,7 +262,7 @@ def resolve_markdown_links(md_content, markdown_path, docs_root):
 
     return re.sub(link_pattern, replace_link, md_content)
 
-def resolve_file_links(md_content, markdown_path):
+def resolve_file_links(md_content, markdown_path, docs_root):
     """Resolve links to files (PDFs, etc.) and upload/replace with Canvas URLs"""
     # Pattern: [text](path/to/file.pdf) or similar
     file_pattern = r'\[([^\]]+)\]\(([^\)]+\.(pdf|docx?|xlsx?|pptx?))\)'
@@ -271,12 +271,17 @@ def resolve_file_links(md_content, markdown_path):
         link_text = match.group(1)
         file_path = match.group(2)
 
+        # Skip external URLs
+        if file_path.startswith(('http://', 'https://')):
+            return match.group(0)
+
         # Resolve relative path
         markdown_dir = Path(markdown_path).parent
         if file_path.startswith('./') or file_path.startswith('../'):
             full_path = (markdown_dir / file_path).resolve()
         else:
-            full_path = Path(file_path)
+            candidate = Path(file_path)
+            full_path = candidate if candidate.is_absolute() else (docs_root / candidate).resolve()
 
         if full_path.exists():
             filename = full_path.name
@@ -293,6 +298,9 @@ def markdown_to_html(markdown_path, docs_root, all_pages_info=None):
     """Convert markdown file to HTML using shared processing pipeline"""
     with open(markdown_path, 'r', encoding='utf-8') as f:
         md_content = f.read()
+
+    # Upload linked files (e.g., PDFs) and rewrite their URLs before HTML conversion
+    md_content = resolve_file_links(md_content, markdown_path, docs_root)
 
     # Use shared processing pipeline with all pages info for internal link resolution
     html_content = process_markdown_to_html(
@@ -480,8 +488,9 @@ def process_all_pages():
             continue
 
         # Prefix title with letter for ordering (A., B., C., ...)
-        letter_prefix = chr(65 + page_index)  # 65 is ASCII for 'A'
-        prefixed_title = f"{letter_prefix}. {page_title}"
+        # letter_prefix = chr(65 + page_index)  # 65 is ASCII for 'A'
+        # prefixed_title = f"{letter_prefix}. {page_title}"
+        prefixed_title = page_title
 
         # Check if file needs upload
         if needs_upload(markdown_path, metadata, docs_root):
