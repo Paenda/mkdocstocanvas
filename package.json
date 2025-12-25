@@ -12,7 +12,5 @@
   "keywords": [],
   "author": "",
   "license": "MPL-2.0",
-  "dependencies": {
-    "puppeteer": "^24.26.1"
-  }
+  "dependencies": {}
 }
